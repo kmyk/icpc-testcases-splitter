@@ -76,7 +76,7 @@ And give it to this tool:
 
 ``` sh
     $ g++ a.cpp
-    $ python3 ./a.out -i input.txt -o input-{}.txt
+    $ python3 split.py ./a.out -i input.txt -o input-{}.txt
 ```
 
 Then you get testcase files like:
@@ -91,14 +91,30 @@ Then you get testcase files like:
     1 2 B
 ```
 
-Also you may want to use `--time SECOND` and `--footer FOOTER` options.
+You may want to use `--time SECOND` and `--footer FOOTER` options.
 
 ``` sh
-    $ python3 ./a.out -i input.txt -o input-{}.txt --time 0.001 --footer '0 0'
+    $ python3 split.py ./a.out -i input.txt -o input-{}.txt --time 0.001 --footer '0 0'
 
     $ cat input-1.txt
     4 2
     0 1 A
     1 2 B
     0 0
+```
+
+Also for the outputs, you can do this with `-1` options if it is simple format. It splits the file line by line.
+
+``` sh
+    $ python3 split.py -1 -i output.txt -o output-{}.txt
+
+    $ cat output.txt
+    AB 2
+    AC 3
+
+    $ cat output-1.txt
+    AB 2
+
+    $ cat output-2.txt
+    AC 3
 ```
