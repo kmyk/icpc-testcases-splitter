@@ -1,3 +1,6 @@
+This repository has been merged by [kmyk/online-judge-tools](https://github.com/kmyk/online-judge-tools), so **obsoleted** now.
+---
+
 # ICPC testcases splitter
 
 Split ACM/ICPC sytle testcases.
