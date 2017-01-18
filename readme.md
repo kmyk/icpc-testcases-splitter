@@ -54,20 +54,23 @@ To do this, you must prepare your (correct/incorrect) solution, like:
 
 ``` c++
     // a.cpp
-    #include <iostream>
-    #include <vector>
-    #include <map>
+#include <iostream>
+#include <vector>
+#include <map>
     using namespace std;
     int main() {
-        // input
-        int v, e; cin >> v >> e;
-        vector<map<int,char> > g(v);
-        for (int i = 0; i < e; ++ i) {
-            int v, w; char c; cin >> v >> w >> c;
-            g[v][w] = c;
+        while (true) {
+            // input
+            int v, e; cin >> v >> e;
+            if (v == 0 and e == 0) break;;
+            vector<map<int,char> > g(v);
+            for (int i = 0; i < e; ++ i) {
+                int v, w; char c; cin >> v >> w >> c;
+                g[v][w] = c;
+            }
+            // output
+            cout << "-1" << endl;
         }
-        // output
-        cout << "-1" << endl;
         return 0;
     }
 ```
